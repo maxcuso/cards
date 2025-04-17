@@ -1,0 +1,154 @@
+/* style.css */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+
+
+h1 {
+    font-family: 'IBM Plex Mono', monospace;
+	font-size: 60px;
+    text-align: center;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 20px;
+    text-align: center;
+	margin-top: 0px;
+	margin-bottom: 60px;
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: calc(100% - 190px); /* Ширина поля ввода чуть меньше контейнера */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Учитываем padding и border в ширину */
+}
+
+.buttons {
+    display: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#rollButton {
+    background-color: #a34;
+    color: white;
+}
+
+#rollButton:hover {
+    background-color: #831;
+}
+
+#goButton {
+    background-color: #159;
+    color: white;
+}
+
+#goButton:hover {
+    background-color: #136;
+}
+
+#backButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    background-color: #333;
+}
+
+#card-display {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Стили для карточки */
+.card {
+    width: 300px;
+    height: 450px;
+    perspective: 1000px; /* Добавляем перспективу для 3D-эффекта */
+    position: relative;
+    margin: 20px auto;
+}
+
+.inner-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #0b0b2a, #2d2d62);
+    border-radius: 14px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d; /* Сохраняем 3D-пространство */
+    transition: transform 0.15s ease-out;
+    will-change: transform, filter; /* Оптимизация для анимации */
+    overflow: hidden; /* Чтобы изображение не выходило за границы */
+}
+
+.glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    pointer-events: none; /* Чтобы блик не мешал взаимодействию */
+}
+
+#card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы изображение заполняло карточку */
+    transition: transform 0.3s ease;
+}
+
+#card-image:hover {
+    transform: scale(1); /* Увеличиваем изображение при наведении */
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космогача</title>
+     <link rel="stylesheet" href="style.css"> <!-- Подключаем CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Интерфейс выбора карточки -->
+        <div id="input-interface">
+            <h1>Collect 'Em All!</h1>
+			<h2>Мне за это не платят!</h2>
+            <div><label for="card-id">Введите ID карточки:</label></div>
+            <input type="text" id="card-id" placeholder="ID карточки">
+            <div class="buttons">
+                <button id="rollButton">ROLL</button>
+                <button id="goButton">GO</button>
+            </div>
+        </div>
+
+        <!-- Интерфейс отображения карточки -->
+        <div id="card-display" class="hidden">
+            <div class="card">
+                <div class="inner-card">
+                    <div class="glare"></div>
+                    <img id="card-image" src="" alt="Карточка">
+                </div>
+            </div>
+            <button id="backButton">Назад</button>
+        </div>
+
+        <!-- Сообщение об ошибке -->
+        <p id="error-message" class="hidden">Карточка не найдена</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
